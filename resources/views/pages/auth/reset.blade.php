@@ -13,7 +13,6 @@
         </div>
 
         <div class="card-body">
-            <p class="text-muted">We will send a link to reset your password</p>
             <form method="POST" action="{{ route('password.update') }}">
                 @csrf
                 <div class="form-group">
@@ -58,6 +57,9 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div class="text-muted mt-5 text-center">
+        Remember your password? <a href="{{ route('login') }}">Login</a>
     </div>
 @endsection
 
