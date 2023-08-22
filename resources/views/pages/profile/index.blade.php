@@ -70,7 +70,7 @@
                                                 class="form-control @error('current_password', 'updatePassword')
                                                 is-invalid
                                             @enderror"
-                                                name="current_password" value="{{ request()->input('current_password', old('current_password')) }}">
+                                                name="current_password">
                                             @error('current_password', 'updatePassword')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -144,7 +144,7 @@
                                                 class="form-control @error('email', 'updateProfileInformation')
                                                 is-invalid
                                             @enderror"
-                                                name='email' value="{{ auth()->user()->email }}" required="">
+                                                name='email' value="{{ auth()->user()->email }}" readonly>
                                             @error('email', 'updateProfileInformation')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
